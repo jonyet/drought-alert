@@ -1,0 +1,28 @@
+{
+  "name": "drougt-alert",
+  "version": "1.0.0",
+  "description": "use wunderground api to get personal weather alerts based on local history",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "babel-node app.js --presets es2015,stage-2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonyet/drougt-alert.git"
+  },
+  "author": "jonyet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonyet/drougt-alert/issues"
+  },
+  "homepage": "https://github.com/jonyet/drougt-alert#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0"
+  }
+}
