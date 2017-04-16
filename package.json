@@ -1,5 +1,5 @@
 {
-  "name": "drougt-alert",
+  "name": "drought-alert",
   "version": "1.0.0",
   "description": "use wunderground api to get personal weather alerts based on local history",
   "main": "app.js",
