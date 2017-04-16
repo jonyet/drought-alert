@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "test",
-    "start": "babel-node --inspect --debug-brk app.js --presets es2015,stage-2"
+    "start": "babel-node app.js --presets es2015,stage-2",
+    "debug": "babel-node --inspect --debug-brk app.js --presets es2015,stage-2"
   },
   "repository": {
     "type": "git",
