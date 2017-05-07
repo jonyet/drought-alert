@@ -2,8 +2,8 @@ import Weather from './lib/weatherFetch';
 import moment from 'moment';
 
 const location = {
-				state: 'GA',
-				city: 'Marietta'
+	state: 'GA',
+	city: 'Marietta'
 };
 
 const alertTrueData = ["20170405", "20170404", "20170403"];
@@ -15,13 +15,7 @@ const threshold = [
 	moment().subtract(3, 'day').format('YYYYMMDD')
 ];
 
-let rainfall = Weather.fetchPrecipSum(threshold, location);
-
-rainfall.then(function(result) {
-   console.log(`${result} inches of rainfall in the last three days`);
-	 if (result < 0.5) {
-		 console.log('alert user to water');
-	 } else {
-		 console.log('do not throw an alert');
-	 }
+Weather.fetchPrecipSum(threshold, location).then((res) => {
+   console.log(`${res} inches of rainfall in the last three days`);
+	 (res < 0.5) ? console.log('alert user to water') : console.log('do not throw an alert');
 });
