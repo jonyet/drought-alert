@@ -1,4 +1,5 @@
 import Weather from './lib/weatherFetch';
+import Alert from './lib/alert';
 import moment from 'moment';
 
 const location = {
@@ -17,5 +18,7 @@ const threshold = [
 
 Weather.fetchPrecipSum(threshold, location).then((res) => {
    console.log(`${res} inches of rainfall in the last three days`);
-	 (res < 0.5) ? console.log('alert user to water') : console.log('do not throw an alert');
+	 if (res < 0.3) {
+		 Alert.slack('#drought-alert', 'water us');
+	 }
 });

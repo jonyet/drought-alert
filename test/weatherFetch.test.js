@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import Weather from '../lib/weatherFetch';
 
 describe('Weather:', () => {
-  describe('fetchPrecipSum -', () => {
+  describe('fetchPrecipSum', () => {
     it('should return a positive number', () => {
       const location = {
 				state: 'GA',
