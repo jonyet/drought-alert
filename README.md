@@ -4,7 +4,7 @@ utilize wunderground API to gather data for a given area to alert the user that 
 **Prerequisites**
 
 - node 7.8.0 [https://github.com/creationix/nvm]
-- weather underground API key (anvil plan)[https://www.wunderground.com/weather/API/]
+- weather underground API key (anvil plan)[https://www.wunderground.com/weather/api/]
 
 **Getting Started**
 
