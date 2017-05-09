@@ -1,5 +1,5 @@
-import Weather from './lib/weatherFetch';
-import Alert from './lib/alert';
+import Weather from './lib/WeatherFetch';
+import Alert from './lib/Alert';
 import moment from 'moment';
 
 const location = {
@@ -21,4 +21,4 @@ Weather.fetchPrecipSum(threshold, location).then((res) => {
 	 if (res < 0.3) {
 		 Alert.slack('#drought-alert', 'water us');
 	 }
-});
+}).catch((err) => { console.log(err) });

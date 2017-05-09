@@ -1,6 +1,5 @@
 import rp from 'request-promise';
 import { expect } from 'chai';
-import Weather from '../lib/weatherFetch';
 
 describe('Alerts:', () => {
   describe('alerts sent to slack', () => {
