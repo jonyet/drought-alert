@@ -16,7 +16,7 @@ const threshold = [
 	moment().subtract(3, 'day').format('YYYYMMDD')
 ];
 
-Weather.fetchPrecipSum(threshold, location).then((res) => {
+(new Weather()).fetchPrecipSum(threshold, location).then((res) => {
    console.log(`${res} inches of rainfall in the last three days`);
 	 if (res < 0.3) {
 		 Alert.slack('#drought-alert', 'water us');

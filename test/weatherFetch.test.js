@@ -11,7 +11,11 @@ describe('Weather:', () => {
       };
       const days = ["20170405", "20170404", "20170403"];
 
-      return Weather.fetchPrecipSum(days, location).then((rain) => { expect(rain, 'precipitation cannot be below 0').to.be.above(0); });
+      const mock = JSON.stringify({ history: { dailysummary: [ { precipi: '10' }]}});
+
+      const rpMock = async () => { return mock; };
+
+      return (new Weather(rpMock)).fetchPrecipSum(days, location).then((rain) => { expect(rain, 'precipitation cannot be below 0').to.be.above(0); });
     });
   });
 });
